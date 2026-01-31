@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  font-style: normal;
+}
+
+.all-elements {
+  width: 1110px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.product-selection__title {
+  height: 78px;
+  margin: 220px 0;
+  text-align: center;
+  font-weight: 400;
+  font-size: 70px;
+  color: #515076;
+}
+
+.bg-dandelions {
+  background: url("/images/bg-dandelions.png");
+  background-repeat: no-repeat;
+}
+
+.product-card-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 45px;
+  left: 85px;
+  margin-top: 408px;
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.product-card {
+  width: 340px;
+  min-height: 573px;
+  border: 1px;
+  padding: 25px;
+  background: #F7F7FA;
+  box-shadow: 2px 2px 10px rgba(81, 80, 118, 0.1);
+}
+
+.product-card__img {
+  width: 290px;
+  height: 245px;
+  left: 110px;
+  top: 433px;
+  display: block;
+  margin: 0 auto;
+}
+
+.product-card__for-skin {
+  width: 171px;
+  height: 24px;
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #A5A3B9;
+}
+
+.product-card__title {
+  width: 220px;
+  height: 27px;
+  margin-top: 5px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #515076;
+}
+
+.product-card__desc {
+  width: 287px;
+  height: 36px;
+  margin-top: 5px;
+  padding-bottom: 0px;
+
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #515076;
+}
+
+.product-card__composition {
+  margin-bottom: 0;
+  width: 49px;
+  height: 18px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #515076;
+}
+
+.list {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.product-card__item {
+  width: 300px;
+  height: 18px;
+  left: 125px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  color: #515076;
+}
+
+.product-card__price-wrapper {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card__price {
+  width: 56px;
+  height: 24px;
+  left: 110px;
+  top: 932px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #515076;
+}
+
+.product-card__price-value {
+  width: 73px;
+  height: 24px;
+  left: 327px;
+  top: 932px;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #515076;
+}
