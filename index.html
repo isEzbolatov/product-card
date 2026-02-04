@@ -9,14 +9,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <title>Product card</title>
-  <link rel="stylesheet" href="main.css/reset.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body style="font-family: Montserrat;">
   <div class="all-elements bg-dandelions">
     <h1 class="product-selection__title">Выбери свой продукт</h1>
-
+    <div class="buttons">
+      <button id="recolor-first-card-button">Перекрасить фон первой карточки</button>
+      <button id="recolor-all-card-button">Перекрасить фон всех карточек</button>
+      <button id="open-google-button">Открыть Google</button>
+      <button id="recolor-button" class="first-color-button">Перекрась меня!</button>
+    </div>
     <div class="product-card-wrapper">
       <div class="product-card">
         <img class="product-card__img" src="images/moisturizing-mousse.png" alt="Увлажняющий мусс" width="290px"
@@ -109,6 +114,9 @@
       </div>
     </div>
   </div>
+
+  <script src="./script.js"> </script>
+
 </body>
 
 </html>
