@@ -42,7 +42,7 @@ function openGoogle() {
 const contentTitle = document.querySelector('.product-selection__title');
 
 contentTitle.addEventListener('mouseover', function () {
-  console.log('Это - супер кнопка!');
+  console.log('Выбери свой продукт');
 });
 
 // Кнопка перекрашивающая сама себя
@@ -50,5 +50,5 @@ contentTitle.addEventListener('mouseover', function () {
 const recolorButton = document.querySelector('#recolor-button');
 
 recolorButton.addEventListener('click', event => {
-  recolorButton.classList.toggle("second-color-button");
+  recolorButton.classList.toggle("bg--cyan");
 });
