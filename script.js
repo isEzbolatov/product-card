@@ -1,11 +1,11 @@
 // Покраска первой карточки
 
-const recolorFirstCardButton = document.getElementById('recolor-first-card-button');
+const firstCardRecolorButton = document.getElementById('recolor-first-card-button');
 const firstProductCard = document.querySelector('.product-card');
 
 const blueHashColor = '#0000ff';
 
-recolorFirstCardButton.addEventListener('click', () => {
+firstCardRecolorButton.addEventListener('click', () => {
   firstProductCard.style.backgroundColor = blueHashColor
 });
 
@@ -24,8 +24,8 @@ recolorAllCardButton.addEventListener('click', () => {
 
 // Переход на страницу Google
 
-const openGoogleButton = document.getElementById('open-google-button');
-openGoogleButton.addEventListener('click', openGoogle);
+const googleOpenButton = document.getElementById('open-google-button');
+googleOpenButton.addEventListener('click', openGoogle);
 
 function openGoogle() {
   const answer = confirm('Вы действительно хотите перейти на страницу Google?');
@@ -42,7 +42,7 @@ function openGoogle() {
 const contentTitle = document.querySelector('.product-selection__title');
 
 contentTitle.addEventListener('mouseover', function () {
-  console.log('Выбери свой продукт');
+  console.log(contentTitle.textContent);
 });
 
 // Кнопка перекрашивающая сама себя
