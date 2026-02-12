@@ -6,18 +6,24 @@ while (true) {
     break;
   }
 
-  let = userChoice = Number(userChoice);
+  userChoice = Number(userChoice);
 
   if (userChoice === 3) {
     // Функция, которая принимает 2 параметра
-    function cityTemp(cityName, temp) {
-      cityName = prompt('Введите город:');
-      temp = prompt("Введите температуру воздуха в городе:");
+    function cityTemp() {
+      while (true) {
+        cityName = prompt('Введите город:');
+        temp = prompt("Введите температуру воздуха в городе:");
+        if (!cityName || !isNaN(cityName) || isNaN(Number(temp)) || temp === "") {
+          alert("Уважаемый ментор, вы ввели неверно город или температуру. Пожалуйста, попробуйте ещё раз!");
+        } else {
+          break;
+        }
+      }
       console.log(`Сейчас в ${cityName} температура - ${temp} градусов по Цельсию`);
     };
 
     cityTemp();
-
     break;
 
   } else if (userChoice === 4) {
@@ -38,9 +44,12 @@ while (true) {
     //Покупка товара
     milk = "Молоко";
     priceMilk = 10;
-    currentBudget = Number(prompt("Молоко. Введите ваш бюджет, для приобретения товара:"));
-    let result = currentBudget >= priceMilk ? console.log(`${milk} приобретён. Спасибо за покупку!`) : console.log(`Вам не хватает ${priceMilk - currentBudget}$, пополните баланс`);
+    function buyProduct() {
+      currentBudget = Number(prompt("Молоко. Введите ваш бюджет, для приобретения товара:"));
+      let result = currentBudget >= priceMilk ? console.log(`${milk} приобретён. Спасибо за покупку!`) : console.log(`Вам не хватает ${priceMilk - currentBudget}$, пополните баланс`);
+    }
 
+    buyProduct();
     break;
 
   } else {
@@ -56,4 +65,4 @@ function stock() {
 //Три переменных на своё усмотрение
 strawberryJam = "Клубничное варенье";
 speedLimit = 90;
-fullBattery = 100;
+const fullBattery = 100;
