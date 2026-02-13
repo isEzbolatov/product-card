@@ -4,6 +4,20 @@
   font-style: normal;
 }
 
+.buttons {
+  position: absolute;
+  top: 0;
+  right: 31%;
+}
+
+.bg--purple {
+  background-color: #7b00ff;
+}
+
+.bg--cyan {
+  background-color: #00d9ff;
+}
+
 .all-elements {
   width: 1110px;
   display: flex;
@@ -99,6 +113,7 @@
 }
 
 .list {
+  list-style: disc;
   list-style-position: inside;
   padding-left: 0;
 }
