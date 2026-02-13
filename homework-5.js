@@ -1,4 +1,6 @@
 // Интерактив в браузере для ментора
+let userChoice;
+
 while (true) {
   userChoice = prompt('Здравствуй, ментор! Это задание №5. Введи пункт задания, которое хочешь проверить(3, 4, 5):');
 
@@ -10,6 +12,9 @@ while (true) {
 
   if (userChoice === 3) {
     // Функция, которая принимает 2 параметра
+    let cityName;
+    let temp;
+
     function cityTemp() {
       while (true) {
         cityName = prompt('Введите город:');
@@ -29,7 +34,7 @@ while (true) {
   } else if (userChoice === 4) {
     // Сравнение переданной скорости с константой скорости света
     const LIGHT_SPEED = 299792458;
-    inputSpeed = Number(prompt("Сравнение передаваемой скорости с константой скорости света. Введите скорость для анализа:"));
+    let inputSpeed = Number(prompt("Сравнение передаваемой скорости с константой скорости света. Введите скорость для анализа:"));
     if (LIGHT_SPEED < inputSpeed) {
       console.log("Сверхсветовая скорость");
     } else if (LIGHT_SPEED > inputSpeed) {
@@ -42,10 +47,10 @@ while (true) {
 
   } else if (userChoice === 5) {
     //Покупка товара
-    milk = "Молоко";
-    priceMilk = 10;
+    let milk = "Молоко";
+    let priceMilk = 10;
     function buyProduct() {
-      currentBudget = Number(prompt("Молоко. Введите ваш бюджет, для приобретения товара:"));
+      let currentBudget = Number(prompt("Молоко. Введите ваш бюджет, для приобретения товара:"));
       let result = currentBudget >= priceMilk ? console.log(`${milk} приобретён. Спасибо за покупку!`) : console.log(`Вам не хватает ${priceMilk - currentBudget}$, пополните баланс`);
     }
 
@@ -63,6 +68,6 @@ function stock() {
 };
 
 //Три переменных на своё усмотрение
-strawberryJam = "Клубничное варенье";
-speedLimit = 90;
+let strawberryJam = "Клубничное варенье";
+let speedLimit = 90;
 const fullBattery = 100;
