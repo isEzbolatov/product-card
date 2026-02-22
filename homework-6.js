@@ -1,5 +1,5 @@
 // (3): Объект на основе моих данных.
-const profile = {
+const userProfile = {
   firstName: "Ismail",
   surName: "Ezbolatov",
   mail: "mr.yfam@mail.ru",
@@ -23,20 +23,19 @@ const autoInfo = {
   transmission: "AT"
 };
 
-let owner = profile;
-autoInfo.owner = (owner);
+let owner = userProfile;
+autoInfo.owner = userProfile;
 
 // (5): Функция проверки максимальной скорости авто.
-function checkMaxSpeed(maxSpeedKmh) {
+function setMaxSpeed(maxSpeedKmh) {
   if (maxSpeedKmh in autoInfo) {
     return;
   } else {
-    let maxSpeedKmh = 245;
-    autoInfo.maxSpeedKmh = (maxSpeedKmh);
+    let maxSpeedKmh = autoInfo.maxSpeedKmh = 245;
   };
 };
 
-checkMaxSpeed();
+setMaxSpeed();
 
 // (6): Функция, котороя выводит свойство и его значение.
 const movies = {
@@ -46,15 +45,15 @@ const movies = {
   cartoon: "Soul"
 };
 
-const searchKey = "cartoon";
+const searchKeyMovie = "cartoon";
 
-function getProperty(obj, key) {
+function getPropertyMovie(obj, key) {
   const value = obj[key];
 
   console.log(`${key}: ${value}`);
 };
 
-getProperty(movies, searchKey);
+getPropertyMovie(movies, searchKeyMovie);
 
 // (7): Массив, который содержит названия продуктов (строки).
 
@@ -67,7 +66,7 @@ const productList = {
 };
 
 // (8): Создали массив состоящий из объектов и добавили в его конец ещё один объект.
-const books = [
+const premiumCollectionBooks = [
   {
     bookName: "Rich Dad Poor Dad",
     author: "Robert Kiyosaki",
@@ -101,7 +100,7 @@ const books = [
   }
 ];
 
-books.push = {
+premiumCollectionBooks.push = {
   bookName: "The Hobbit",
   author: "J.R.R. Tolkien",
   yearPublication: 1937,
@@ -114,7 +113,7 @@ books.push = {
 (Первый массив скопировал по индексу из предыдущего задания)
 */
 
-const firstBook = [books[1]];
+const firstBook = [premiumCollectionBooks[1]];
 const secondBook = [{
   bookName: "Harry Potter and the Chamber of Secrets",
   author: "J.K. Rowling",
