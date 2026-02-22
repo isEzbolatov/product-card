@@ -47,13 +47,13 @@ const movies = {
 
 const searchKeyMovie = "cartoon";
 
-function getPropertyMovie(obj, key) {
+function getObjectProperty(obj, key) {
   const value = obj[key];
 
   console.log(`${key}: ${value}`);
 };
 
-getPropertyMovie(movies, searchKeyMovie);
+getObjectProperty(movies, searchKeyMovie);
 
 // (7): Массив, который содержит названия продуктов (строки).
 
@@ -74,7 +74,6 @@ const premiumCollectionBooks = [
     coverСolor: "Purple",
     genre: "Self-development"
   },
-
   {
     bookName: "Harry Potter and the Sorcerer's Stone",
     author: "J.K. Rowling",
@@ -82,7 +81,6 @@ const premiumCollectionBooks = [
     coverСolor: "Red",
     genre: "Fantasy"
   },
-
   {
     bookName: "The Great Gatsby",
     author: "F. Scott Fitzgerald",
@@ -90,7 +88,6 @@ const premiumCollectionBooks = [
     coverСolor: "Blue",
     genre: "Classic literature"
   },
-
   {
     bookName: "The Hitchhiker's Guide to the Galaxy",
     author: "Douglas Adams",
@@ -114,13 +111,15 @@ premiumCollectionBooks.push = {
 */
 
 const firstBook = [premiumCollectionBooks[1]];
-const secondBook = [{
-  bookName: "Harry Potter and the Chamber of Secrets",
-  author: "J.K. Rowling",
-  yearPublication: 1998,
-  coverСolor: "Blue",
-  genre: "Fantasy / Young Adult Fiction"
-}];
+const secondBook = [
+  {
+    bookName: "Harry Potter and the Chamber of Secrets",
+    author: "J.K. Rowling",
+    yearPublication: 1998,
+    coverСolor: "Blue",
+    genre: "Fantasy / Young Adult Fiction"
+  }
+];
 
 const harryPotterCollection = [...firstBook, ...secondBook];
 
