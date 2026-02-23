@@ -6,7 +6,7 @@ while (true) {
 
   if (userChoice === null) {
     break;
-  }
+  };
 
   userChoice = Number(userChoice);
 
@@ -41,7 +41,7 @@ while (true) {
       console.log("Субсветовая  скорость");
     } else if (LIGHT_SPEED === inputSpeed) {
       console.log("Скорость света");
-    }
+    };
 
     break;
 
@@ -52,15 +52,15 @@ while (true) {
     function buyProduct() {
       let currentBudget = Number(prompt("Молоко. Введите ваш бюджет, для приобретения товара:"));
       let result = currentBudget >= priceMilk ? console.log(`${milk} приобретён. Спасибо за покупку!`) : console.log(`Вам не хватает ${priceMilk - currentBudget}$, пополните баланс`);
-    }
+    };
 
     buyProduct();
     break;
 
   } else {
     alert("Уважаемый ментор, вы ввели неверный пункт. Пожалуйста, используйте только цифры 3, 4 или 5!");
-  }
-}
+  };
+};
 
 // Функция на своё усмотрение
 function stock() {
