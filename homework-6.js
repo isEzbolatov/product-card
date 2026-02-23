@@ -31,7 +31,7 @@ function setMaxSpeed(maxSpeedKmh) {
   if (maxSpeedKmh in autoInfo) {
     return;
   } else {
-    let maxSpeedKmh = autoInfo.maxSpeedKmh = 245;
+    autoInfo.maxSpeedKmh = 245;
   };
 };
 
@@ -111,17 +111,15 @@ premiumCollectionBooks.push = {
 */
 
 const firstBook = [premiumCollectionBooks[1]];
-const secondBook = [
-  {
-    bookName: "Harry Potter and the Chamber of Secrets",
-    author: "J.K. Rowling",
-    yearPublication: 1998,
-    coverСolor: "Blue",
-    genre: "Fantasy / Young Adult Fiction"
-  }
-];
+const secondBook = {
+  bookName: "Harry Potter and the Chamber of Secrets",
+  author: "J.K. Rowling",
+  yearPublication: 1998,
+  coverСolor: "Blue",
+  genre: "Fantasy / Young Adult Fiction"
+};
 
-const harryPotterCollection = [...firstBook, ...secondBook];
+const harryPotterCollection = [...firstBook, { ...secondBook }];
 
 // (10): Работа с методом "Map"
 function getOldBooksStatus(harryPotterCollection) {
