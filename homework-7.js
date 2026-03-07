@@ -22,18 +22,18 @@ reverseMyArray(cars);
 const containEmailDotCom = socialMediaComments.filter(comment => comment.email.includes(".com"));
 
 // (8): Переборка массива пользователей у которых id <= 5 postId: 2, а те, у кого id > 5, postId: 1.
-const distributedUsers = socialMediaComments.map(comment =>
-  comment.id <= 5
-    ? ({ ...comment, postId: 2 })
-    : ({ ...comment, postId: 1 })
-);
+const distributedUsers = socialMediaComments.map(comment => ({
+  ...comment,
+  postId: comment.id <= 5 ? 2 : 1
+}));
 
 // (9): Переборка массива состоящий только из айди и имени.
 const onlyIdName = socialMediaComments.map(({ id, name }) => ({ id, name }));
 
 // (10): Переборка массива с добавлением нового свойства.
 const lengthBodyMessage = socialMediaComments.map(comment => ({
-  ...comment, isInvalid: comment.body.length > 180
+  ...comment,
+  isInvalid: comment.body.length > 180
 }));
 
 // (11): Вывод массива из почт с помощью "reduce" и "map".
