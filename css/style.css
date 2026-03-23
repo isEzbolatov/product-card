@@ -107,20 +107,16 @@
   margin-top: 15px;
   margin-bottom: 0;
   width: 49px;
-  height: 18px;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
   color: #515076;
 }
 
-.product-card__active-components-list {
-  list-style: disc;
-  list-style-position: inside;
-  padding-left: 0;
-}
-
 .product-card__active-components {
+  list-style-type: disc;
+  display: list-item;
+  list-style-position: inside;
   width: 300px;
   height: 18px;
   left: 125px;

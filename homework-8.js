@@ -5,7 +5,7 @@ const productCardList = document.getElementById('product-card-list');
 
 // (5): Функция, которая отрисовывает введённое количество карточек.
 function getAmount() {
-  let cardsToDisplay = Number(prompt('Введите количество карточек от 1 до 5, которое хотите увидеть:'));
+  const cardsToDisplay = Number(prompt('Введите количество карточек от 1 до 5, которое хотите увидеть:'));
   if (cardsToDisplay >= 1 && cardsToDisplay <= 5) {
     return cardsToDisplay;
   } else {
@@ -32,11 +32,10 @@ function renderCards(data) {
     cardClone.querySelector('.product-card__type-skin').textContent = card.typeSkin;
     cardClone.querySelector('.product-card-name').textContent = card.productName;
     cardClone.querySelector('.product-card__description').textContent = card.description;
-    cardClone.querySelector('.product-card__compound').textContent = card.compound.name;
 
-    const componentList = cardClone.querySelector('.product-card__active-components-list');
+    const componentList = cardClone.querySelector('.product-card__compound');
 
-    card.compound.activeComponents.forEach(componentText => {
+    card.compound.forEach(componentText => {
       const li = document.createElement('li');
       li.classList.add('product-card__active-components');
       li.textContent = componentText;
@@ -44,18 +43,14 @@ function renderCards(data) {
       componentList.appendChild(li);
     });
 
-    cardClone.querySelector('.product-card__price-name').textContent = card.price.name;
-    cardClone.querySelector('.product-card__price-value').textContent = card.price.value.toLocaleString('ru-RU') + ' ₽';
+    cardClone.querySelector('.product-card__price-value').textContent = card.price.toLocaleString('ru-RU') + ' ₽';
     productCardList.appendChild(cardClone);
   });
 };
 
 // (4): Массив объектов с помощью метода reduce. Ключ - название продукта, значение - описание.
 const arrayCard = productCards.reduce((acc, product) => {
-  const newObject = {
-    [product.productName]: product.description
-  };
-
-  acc.push(newObject);
+  acc[product.productName] = product.description
   return acc
 }, []);
+console.log(arrayCard);
