@@ -1,4 +1,4 @@
-import { productCards } from "./array-product-cards.js";
+import { productCards } from "./product-cards.js";
 
 const productCardTemplate = document.getElementById('product-card-template');
 const productCardList = document.getElementById('product-card-list');
@@ -33,7 +33,7 @@ function renderCards(data) {
     cardClone.querySelector('.product-card-name').textContent = card.productName;
     cardClone.querySelector('.product-card__description').textContent = card.description;
 
-    const componentList = cardClone.querySelector('.product-card__compound');
+    const componentList = cardClone.querySelector('.product-card__compound-item');
 
     card.compound.forEach(componentText => {
       const li = document.createElement('li');
@@ -50,7 +50,7 @@ function renderCards(data) {
 
 // (4): Массив объектов с помощью метода reduce. Ключ - название продукта, значение - описание.
 const arrayCard = productCards.reduce((acc, product) => {
-  acc[product.productName] = product.description
-  return acc
+  acc[product.productName] = product.description;
+  return acc;
 }, []);
 console.log(arrayCard);
