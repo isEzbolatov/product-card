@@ -1,22 +1,23 @@
 // Покраска первой карточки
 
 const firstCardRecolorButton = document.getElementById('recolor-first-card-button');
-const firstProductCard = document.querySelector('.product-card');
 
 const blueHashColor = '#0000ff';
 
 firstCardRecolorButton.addEventListener('click', () => {
+  const firstProductCard = document.querySelector('.product-card');
+
   firstProductCard.style.backgroundColor = blueHashColor
 });
 
 // Покраска всех карточек
 
 const greenHashColor = '#d25d04';
-
-const productCards = document.querySelectorAll('.product-card');
 const recolorAllCardButton = document.getElementById('recolor-all-card-button');
 
 recolorAllCardButton.addEventListener('click', () => {
+  const productCards = document.querySelectorAll('.product-card');
+
   productCards.forEach(
     card => card.style.backgroundColor = greenHashColor
   )
