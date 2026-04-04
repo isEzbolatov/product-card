@@ -21,6 +21,47 @@
       <button id="recolor-all-card-button">Перекрасить фон всех карточек</button>
       <button id="open-google-button">Открыть Google</button>
       <button id="recolor-button" class="bg--purple">Перекрась меня!</button>
+      <button id="registration-button">Регистрация</button>
+    </div>
+
+    <div class="modal overlay">
+      <div class="modal-showed">
+        <h2 class="modal-title">Регистрация:</h2>
+        <form class="registration-form" id="reg-form">
+          <div class="form-item">
+            <label for="first-name">Имя:</label>
+            <input type="text" placeholder="Введите имя" name="firstName" id="firstName" required>
+          </div>
+
+          <div class="form-item">
+            <label for="last-name">Фамилия:</label>
+            <input type="text" placeholder="Введите Фамилию" name="lastName" id="lastName" required>
+          </div>
+
+          <div class="form-item">
+            <label for="birth-date">Дата рождения:</label>
+            <input type="date" placeholder="Введите дату рождения" name="birthDate" id="birthDate" required>
+          </div>
+
+          <div class="form-item">
+            <label for="login">Логин:</label>
+            <input type="text" placeholder="Введите логин" name="login" id="login" required>
+          </div>
+
+          <div class="form-item">
+            <label for="password">Пароль:</label>
+            <input type="password" placeholder="Введите пароль" name="password" id="password" required minlength="6">
+          </div>
+
+          <div class="form-item">
+            <label for="confirm-password">Пароль повторно:</label>
+            <input type="password" placeholder="Повторите пароль" name="confirmPassword" id="confirm-password" required>
+          </div>
+
+          <button type="submit" class="submit-btn">Зарегистрироваться</button>
+        </form>
+        <button class="modal__close">&#10006</button>
+      </div>
     </div>
 
     <ul id="product-card-list"></ul>
@@ -39,14 +80,54 @@
         </p>
       </div>
     </template>
+  </div>
 
-    <script src="script.js"> </script>
-    <script src="homework-5.js"></script>
-    <script src="homework-6.js"></script>
-    <script type="module" src="homework-7.js"></script>
-    <script type="module" src="comments.js"></script>
-    <script type="module" src="homework-8.js"></script>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer__info">
+          <h3 class="footer-title">Product Cards</h3>
+          <p class="footer-desc">У Нас Самые Лучшие Продукты Для Кожи!</p>
+        </div>
+        <div class="footer-socials">
+          <img class="tg-icon" src="images/tg-icon.svg" alt="Телеграм">
+          <img class="vk-icon" src="images/vk-icon.svg" alt="Вконтакте">
+        </div>
+      </div>
 
+      <div class="footer-center">
+        <p class="subscribe-label" for="email">Подпишись на наши акции:</p>
+        <form class="subscribe-form" id="email-form">
+          <input type="email" placeholder="Ваш Email..." name="email" class="subscribe-input" required>
+          <button type="submit" class="subscribe-button">Подписаться</button>
+        </form>
+      </div>
+
+      <nav class="footer-nav">
+        <h3 class="footer-title">Быстрые ссылки</h3>
+        <ul class="footer-menu">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Магазин</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <p class="line-decoretion"></p>
+
+    <div class="footer-bottom">
+      <a href="www.product-cards.com">www.product-cards.com</a>
+      <small>©all right reserve</small>
+    </div>
+  </footer>
+
+  <script src="script.js"> </script>
+  <script src="homework-5.js"></script>
+  <script src="homework-6.js"></script>
+  <script type="module" src="homework-7.js"></script>
+  <script type="module" src="comments.js"></script>
+  <script type="module" src="homework-8.js"></script>
+  <script type="module" src="homework-9.js"></script>
 </body>
 
 </html>
