@@ -38,6 +38,7 @@ modalRegistration.addEventListener('click', closeModal)
 
 regForm.addEventListener('submit', (event) => {
   if (!regForm.checkValidity()) {
+    ы
     alert('Проверьте введённые данные!')
     return;
   };
