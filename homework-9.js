@@ -1,4 +1,5 @@
-import { Modal } from "./Modal.js";
+import Modal from './Modal.js';
+import Form from './Form.js';
 
 // (4): Валидация кнопки подписаться и вывод в консоль.
 const subscribeForm = document.getElementById('email-form');
@@ -15,19 +16,17 @@ subscribeForm.addEventListener('submit', (event) => {
 // (5, 6): Модальной окно регистрации.
 const btnRegistration = document.getElementById('registration-button');
 const regForm = document.getElementById('reg-form');
+
 const myRegWindow = new Modal('modal-registration-id');
+const myRegForm = new Form('reg-form');
 
-//let user;
-
-btnRegistration.addEventListener('click', myRegWindow.open);
+btnRegistration.addEventListener('click', () => myRegWindow.open());
 
 regForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  if (!regForm.checkValidity()) {
-    alert('Проверьте введённые данные!')
-    return;
-  };
+  const isValid = myRegForm.formValidity();
+  console.log('Валидность формы:', isValid);
 
   const formData = new FormData(event.target);
   let passwordValue = btoa(formData.get('password'));
@@ -38,23 +37,13 @@ regForm.addEventListener('submit', (event) => {
     return;
   };
 
-  const user = Object.fromEntries(formData.entries());
+  delete myRegForm.confirmPassword;
 
+  Object.freeze(myRegForm);
 
-  user = {
-    ...Object.fromEntries(new FormData(event.target)),
-    password: passwordValue,
-    confirmPassword: confirmPasswordValue,
-    createdOn: new Date().toLocaleString()
-  };
-
-  delete user.confirmPassword;
-
-  Object.freeze(user);
-
-  console.log(user);
+  console.log('Зарегистрирован пользователь:', myRegForm.getValues());
   alert('Регистрация прошла успешно!');
 
   myRegWindow.close();
-  event.target.reset();
+  myRegForm.formReset();
 });

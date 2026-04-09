@@ -1,3 +1,4 @@
+import './Form.js';
 import './Modal.js';
 import './comments.js';
 import './homework-5.js';

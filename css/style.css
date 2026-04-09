@@ -299,6 +299,11 @@ footer {
   display: none;
 }
 
+.modal.is-open {
+  display: flex;
+  visibility: visible;
+}
+
 .overlay {
   position: fixed;
   inset: 0;

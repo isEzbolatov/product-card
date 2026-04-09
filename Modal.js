@@ -1,38 +1,28 @@
 // (ДЗ №10.4): Класс модального окна с параметрами.
-export class Modal {
-  constructor(id) {
-    this.modalElement = document.getElementById(id);
-    this.listnerBtnClose();
+export default class Modal {
+  constructor(modalId) {
+    this.modal = document.getElementById(modalId);
+    this.closeBtn = this.modal.querySelector('.modal__close');
+    this.setupEventListner();
   };
 
   open() {
-    this.modalElement.style.display = 'flex';
-    this.modalElement.style.opacity = 1;
+    this.modal.classList.add('is-open');
   };
 
   close() {
-    this.modalElement.style.display = 'none';
-    this.modalElement.style.opacity = 0;
+    this.modal.classList.remove('is-open');
   };
 
-  checkOpenModal() {
-
+  isOpen() {
+    return this.modal.classList.contains('is-open');
   };
 
-  listnerBtnClose() {
-    this.modalElement.addEventListener('click', (event) => {
-      if (event.target.closest('.modal__close')) {
+  setupEventListner() {
+    if (this.closeBtn) {
+      this.closeBtn.addEventListener('click', () => {
         this.close();
-      };
-    });
+      });
+    };
   };
-}
-
-const modal = new Modal('modal-registration-id');
-
-const registrationButton = document.getElementById('registration-button');
-registrationButton.addEventListener('click', () => {
-  modal.open();
-});
-
-
+};
