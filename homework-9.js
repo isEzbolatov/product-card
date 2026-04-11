@@ -20,8 +20,6 @@ regForm.addEventListener('submit', (event) => {
   const isValid = myRegForm.formValidity();
   console.log('Валидность формы:', isValid);
 
-  myRegForm.encryptionPassword();
-
   const values = myRegForm.getValues();
 
   if (values.password !== values.confirmPassword) {
@@ -29,12 +27,13 @@ regForm.addEventListener('submit', (event) => {
     return;
   };
 
-  values.password = encrypted.password;
-  delete myRegForm.confirmPassword;
+  const encrypted = myRegForm.encryptionPassword(values.password);
+  values.password = encrypted;
+  delete values.confirmPassword;
 
-  Object.freeze(myRegForm);
+  Object.freeze(values);
 
-  console.log('Зарегистрирован пользователь:', myRegForm.getValues());
+  console.log('Зарегистрирован пользователь:', values);
   alert('Регистрация прошла успешно!');
 
   myRegWindow.close();
